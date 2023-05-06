@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo.png" type="image/png">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"></script>
+    <style>
+        body {
+         font-family: 'Poppins', sans-serif;
+         margin: 0;
+         padding: 0;
+     }
+     
+     header {
+         background-color: #333;
+         color: #fff;
+         padding: 10px; 0;
+     }
+     
+     header h1 {
+         margin: 0;
+         padding: 0;
+         float: left;
+     }
+     .container {
+         width: 80%;
+         margin: 0 auto;
+     }
+     
+     section#services {
+         padding: 50px 0;
+     }
+     
+     .service {
+         display: flex;
+         flex-direction: column;
+         align-items: center
+      
+     }
+     h1,h2{
+        color: #fd4766;
+     }
+     </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav>
+            <img src="./img/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 style="text-align: center;">Our Services</h1>
+    <section class="services" style="border:solid 5px #CCC;
+    border-radius:25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="display: flex;  
+                    flex-wrap: wrap;">
+                        <i class="fas fa-paint-brush"></i>
+                        <h2>Graphic Designing</h2>
+                        <p>We create stunning visual designs to help your brand stand out from the crowd.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Front-end Development</h2>
+                        <p>We develop modern and responsive applications that are optimized for all devices and platforms.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h2>App Development</h2>
+                        <p>We build customized applications that meet your business needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <i class="fas fa-globe"></i>
+                        <h2>Digital Marketing</h2>
+                        <p>We offer comprehensive digital marketing services to help your business grow online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <i class="fas fa-search"></i>
+                        <h2>Search Engine Optimization (SEO)</h2>
+                        <p>We optimize your website to improve its visibility and ranking on search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
+
+</body>
+
+</html>

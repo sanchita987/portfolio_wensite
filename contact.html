@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo.png" type="image/png">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous" type="text/javascript"></script>
+    <script>
+  function validateForm() {
+                // Get form inputs
+                var nameInput = document.forms[0]["name"];
+                var emailInput = document.forms[0]["email"];
+                var phoneInput = document.forms[0]["phone"];
+                var messageInput = document.forms[0]["message"];
+              
+                // Check if name is empty
+                if (nameInput.value == "") {
+                  alert("Please enter your name.");
+                  return false;
+                }
+              
+                // Check if email is valid
+                if (!isValidEmail(emailInput.value)) {
+                  alert("Please enter a valid email address.");
+                  return false;
+                }
+              
+                // Check if phone is valid
+                if (!isValidPhone(phoneInput.value)) {
+                  alert("Please enter a valid phone number.");
+                  return false;
+                }
+              
+                // Check if message is empty
+                if (messageInput.value == "") {
+                  alert("Please enter your message.");
+                  return false;
+                }
+              
+                return true;
+              }
+              
+              function isValidEmail(email) {
+                // Regular expression to check email format
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+              }
+              
+              function isValidPhone(phone) {
+                // Regular expression to check phone format
+                var phoneRegex = /^\d{10}$/;
+                return phoneRegex.test(phone);
+              }
+  </script>
+</head>
+<body>
+<div class="hero">
+        <nav>
+            <img src="./img/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="container">
+          <div class="form">
+            <div class="contact-info">
+              <h3 class="title">Let's get in touch</h3>
+              <div class="info">
+                <div class="information">
+                  <img src="location.png" class="icon" alt="" />
+                  <p>Budhanilkantha-11, Kapan</p>
+                </div>
+                <div class="information">
+                  <img src="email.png" class="icon" alt="" />
+                  <p>sacheeta987@gmail.com</p>
+                </div>
+                <div class="information">
+                  <img src="phone.png" class="icon" alt="" />
+                  <p>9863335363</p>
+                </div>
+              </div>
+    
+              <div class="social-media">
+                <p>Connect with us :</p>
+                <div class="social-icons">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="contact-form">
+             
+              <form action="index.html" autocomplete="off" onsubmit="return validateForm()">
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                  <input type="text" name="name" class="input" placeholder="Username" required/>
+                </div>
+                <div class="input-container">
+                  <input type="email" name="email" class="input" placeholder="Email" required />
+                </div>
+                <div class="input-container">
+                  <input type="tel" name="phone" class="input" placeholder="Phone" required/>
+                </div>
+                <div class="input-container textarea">
+                  <textarea name="message" class="input" placeholder="Message" required></textarea>
+                </div>
+                <input type="submit" value="Send" class="btn" onclick="validateForm()" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+</body>
+</html>
